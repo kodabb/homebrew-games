@@ -5,16 +5,10 @@ class Hedgewars < Formula
 
   desc "A turn based strategy/artillery/action and comedy game"
   homepage "http://www.hedgewars.org"
-  version "0.9.21"
 
   stable do
-    url "http://download.gna.org/hedgewars/hedgewars-src-0.9.21.1.tar.bz2"
-    sha256 "590a9458d2123c5550d5eb39edfed28d0663703d76e13c8987237c92ca41f3f8"
-
-    patch do
-      url "http://hedgewars.org/files/patches/all.php"
-      sha256 "ee8f4e702197b7908e7fd8124fbbb54a4c7cf3792b1de2ff29a4e709ce721cbd"
-    end
+    url "http://download.gna.org/hedgewars/hedgewars-src-0.9.22.tar.bz2"
+    sha256 "b699c8971ff420c3edd6533527ae2e99040f1e79207c9140826945bcf0e62192"
   end
   bottle do
     cellar :any
