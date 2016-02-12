@@ -42,10 +42,6 @@ class Hedgewars < Formula
   def install
     # rely on homebrew update, packaging, and source system
     args = %w[-DNOAUTOUPDATE=1 -DSKIPBUNDLE=1 -DPHYSFS_SYSTEM=1 -DLUA_SYSTEM=1]
-    # homebrew fpc does not set this path in /etc/fpc.cfg
-    fpcversion = `fpc -iW`.chomp
-    fpcpath = "#{Formula["fpc"].opt_lib}/fpc/"
-    args << "-DCMAKE_Pascal_FLAGS=-Fu" + fpcpath + fpcversion + "/units/x86_64-darwin/*/"
 
     args << "-DGL2=1" if build.with? "gl2"
     args << "-DNOSERVER=1" if build.without? "server"
